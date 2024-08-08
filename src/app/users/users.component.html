@@ -1,0 +1,20 @@
+<app-header></app-header>
+<section class="Users_sec">
+    <div  *ngIf="!isLoading"class="container">
+      <form [formGroup]="searchForm" class="mt-3 mb-3">
+        <mat-form-field appearance="outline">
+          <mat-label>Search by ID</mat-label>
+          <input matInput formControlName="search" placeholder="Enter user ID">
+        </mat-form-field>
+      </form>
+      <div class="row p-2">
+        <div *ngFor="let user of users" class="col-lg-4 col-md-6 col-sm-12 mb-3">
+          <app-cards [users]="[user]"></app-cards>
+        </div>
+      </div>
+      <div  *ngIf="isLoading" class="spinner-overlay">
+        <mat-spinner  color="primary"></mat-spinner> <!-- Loading spinner -->
+       </div>
+    </div>
+  </section>
+  

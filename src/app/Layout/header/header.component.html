@@ -1,0 +1,14 @@
+<header>
+   <div class="container m-auto">
+    <div class="d-flex align-items-center justify-content-center">
+        <pagination
+        [totalItems]="bigTotalItems"
+        
+        [maxSize]="maxSize"
+        previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"
+        (pageChanged)="onPageChanged($event)">
+      </pagination>
+    </div>
+   </div>
+    
+</header>

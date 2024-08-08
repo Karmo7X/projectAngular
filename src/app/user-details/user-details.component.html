@@ -1,0 +1,28 @@
+<section class="user-details">
+    <div class="container">
+      <mat-card *ngIf="!isLoading && user" class="user-card">
+        <mat-card-header>
+          <img mat-card-avatar class="user-avatar" [src]="user.avatar" [alt]="user.first_name + ' ' + user.last_name">
+          <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+          <mat-card-subtitle>ID: {{ user.id }}</mat-card-subtitle>
+        </mat-card-header>
+  
+        <mat-card-content>
+          <div class="user-info">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+         
+            <!-- Add more user details here -->
+          </div>
+        </mat-card-content>
+  
+        <mat-card-actions class="d-flex align-items-center justify-content-end">
+          <button mat-button routerLink="/">Back to list</button>
+        </mat-card-actions>
+      </mat-card>
+     <div  *ngIf="isLoading" class="spinner-overlay">
+      <mat-spinner  color="primary"></mat-spinner> <!-- Loading spinner -->
+     </div>
+      
+    </div>
+  </section>
+  

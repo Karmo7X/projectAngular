@@ -1,0 +1,13 @@
+<div class="card-container">
+  <mat-card *ngFor="let user of users" class="user-card" appearance="outlined">
+    <mat-card-header>
+      <img mat-card-avatar class="user-avatar" [src]="user.avatar" [alt]="user.first_name + ' ' + user.last_name">
+      <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+      <mat-card-subtitle>ID: {{ user.id }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-actions>
+      <button mat-button (click)="viewUser(user.id)">Show more</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

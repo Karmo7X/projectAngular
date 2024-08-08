@@ -1,0 +1,53 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Spacing between cards */
+    justify-content: center;
+  }
+  
+  .user-card {
+    width: 300px; /* Adjust card width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .user-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .user-avatar {
+    width: 64px; /* Avatar size */
+    height: 64px; /* Avatar size */
+    border-radius: 50%; /* Circular avatar */
+  }
+  
+  mat-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Spacing between avatar and text */
+  }
+  
+  mat-card-title {
+    font-weight: bold; /* Emphasize the name */
+  }
+  
+  mat-card-subtitle {
+    color: #757575; /* Subtle color for the subtitle */
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+  }
+  
+  button {
+    color: #007bff; /* Button text color */
+    font-weight: bold; /* Emphasize button text */
+  }
+  
+  button:hover {
+    color: #0056b3; /* Darker color on hover */
+  }
+  
